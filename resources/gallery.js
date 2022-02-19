@@ -207,6 +207,7 @@
         function unaminatePhotoElement(photoElement)
         {
             photoElement.classList.remove("zoom");
+            photoElement.classList.remove("fly-away");
 
             photoElement.removeAttribute("style");
         }
@@ -233,8 +234,10 @@
                 baseView.classList.remove("grid-view");
                 carouselViewport.classList.remove("invisible");
                 hideGridView(); 
-
-                carousel.scrollLeft = imageElementOffset[photoIndex];
+                 // For iOS: A setTimeout with 50ms to clear the redraw of any new height adjustment of the carousel before we set an adjusted height for the scrollViewport.
+                setTimeout(() => {
+                    carousel.scrollLeft = imageElementOffset[photoIndex];
+                }, 25);
             });
 
             
