@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Photo Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../resources/gallery.css" />
+</head>
+<body class="grid-view">
+    <div class="base-view basic-gallery">
+        <div class="header toolbar">
+            <!-- Start: Document Heading 
+                 Add tabindex to H1-->
+            <h1></h1>
+            <!-- End: Document Heading -->
+        </div>
+        <div class="gallery">
+            <div class="grid">
+                <!-- Start: Thumbnails
+                     Use code-snippet/thumbnails-with-buttons.html to complete this section  --> 
+                <div class="photos">
+                    <div class="photo" role="button" data-title="Mosaic" data-idx="0">
+                        <img src="../resources/images/mosaic.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-title="Skyline" data-idx="1">
+                        <img src="../resources/images/skyline.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-title="Dogs" data-idx="2">
+                        <img src="../resources/images/dogs.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-title="Laptop" data-idx="3">
+                        <img src="../resources/images/laptop.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-title="Flowers" data-idx="4">
+                        <img src="../resources/images/flowers.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-title="Group" data-idx="5">
+                        <img src="../resources/images/group.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-title="Sculpture" data-idx="6">
+                        <img src="../resources/images/sculpture.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-title="Sunset" data-idx="7">
+                        <img src="../resources/images/sunset.jpeg" alt=""/>
+                    </div>
+                </div>
+                <!-- End: Thumbnails -->
+            </div>
+            <!-- Start: Detail Overlay 
+                 Use code-snippet/alt-text.txt to complete this section -->
+            <div class="detail-overlay">
+                <span class="close-button"></span>
+                <img class="detail-overlay-img" src="../resources/images/mosaic.jpeg" />
+                <img class="detail-overlay-img" src="../resources/images/skyline.jpeg"/>
+                <img class="detail-overlay-img" src="../resources/images/dogs.jpeg" />
+                <img class="detail-overlay-img" src="../resources/images/laptop.jpeg" />
+                <img class="detail-overlay-img" src="../resources/images/flowers.jpeg" />
+                <img class="detail-overlay-img" src="../resources/images/group.jpeg" />
+                <img class="detail-overlay-img" src="../resources/images/sculpture.jpeg" />
+                <img class="detail-overlay-img" src="../resources/images/sunset.jpeg" />
+            </div>
+            <!-- End: Detail Overlay -->
+        </div>
+        <div class="footer toolbar">
+            <!-- Start: Toolbar Buttons
+                 Use code-snippet/toolbar-options-with-tabindex.html to complete this section  -->
+            <ul>
+                <li class="img-opt-btn plus-one" role="button"><span>+1</span></li>
+                <li class="img-opt-btn comment" role="button"><span>comment</span></li>
+                <li class="img-opt-btn add" role="button"><span>add</span></li>
+                <li class="img-opt-btn share" role="button"><span>share</span></li>
+            </ul>
+            <!-- End: Toolbar Buttons -->
+        </div>
+    </div>
+    <script type="text/javascript" src="../resources/basic-gallery.js"></script>
+</body>
+</html>
