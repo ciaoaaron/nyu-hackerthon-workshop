@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Photo Gallery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,38 +7,40 @@
 </head>
 <body>
 
-    <div class="grid-view base-view" data-title="Image Gallery">
+    <div class="grid-view base-view" data-title=" ">
         <div class="header toolbar">
-            <h1></h1>
-            <span class="close-button" role="button"></span>
+            <h1>Photo Galery</h1>
+            <span class="close-button" role="button" aria-label="close"></span>
         </div>
         <div class="gallery">
             <div class="grid">
                 <div class="photos" data-title="Lounge">
-                    <div class="photo" role="button" data-full-url="./resources/images/lounge.jpg">
-                        <img src="./resources/images/lounge-thumb.jpg" alt=""/>
+                    <ul>
+                        <div class="photo" role="button" data-full-url="./resources/images/mosaic.jpeg">
+                            <li><button type="button" aria-label="open photo of mosaic"><img src="./resources/images/mosaic.jpeg" alt="A colorful mosaic depicting a street view with a person riding skateboard in the center"/></button></li>
                     </div>
-                    <div class="photo" role="button" data-full-url="./resources/images/mount.jpg">
-                        <img src="./resources/images/mount-thumb.jpg" alt=""/>
+                    <div class="photo" role="button" data-full-url="./resources/images/skyline.jpeg">
+                        <li><button type="button" aria-label="open photo of skyline"><img src="./resources/images/skyline.jpeg" alt="New York night skyline with Empire State building in the center"/></button></li>
                     </div>
-                    <div class="photo" role="button" data-full-url="./resources/images/air.jpg">
-                        <img src="./resources/images/air-thumb.jpg" alt=""/>
+                    <div class="photo" role="button" data-full-url="./resources/images/dogs.jpeg">
+                        <li><button type="button" aria-label="open photo of dogs"><img src="./resources/images/dogs.jpeg" alt="Three small dogs eating a pink cake"/></button></li>
                     </div>
-                    <div class="photo" role="button" data-full-url="./resources/images/racecar.jpg">
-                        <img src="./resources/images/racecar-thumb.jpg" alt=""/>
+                    <div class="photo" role="button" data-full-url="./resources/images/laptop.jpeg">
+                        <li><button type="button"aria-label="open photo of laptop"><img src="./resources/images/laptop.jpeg" alt="Laptop screen with YouTube music video, a song by Alan Walkers & Sia"/></button></li>
                     </div>
-                    <div class="photo" role="button" data-full-url="./resources/images/desk.jpg">
-                        <img src="./resources/images/desk-thumb.jpg" alt=""/>
+                    <div class="photo" role="button" data-full-url="./resources/images/flowers.jpeg">
+                        <li><button type="button" aria-label="open photo of flowers"><img src="./resources/images/flowers.jpeg" alt="white flowers on an apple tree"/></button></li>
                     </div>
-                    <div class="photo" role="button" data-full-url="./resources/images/lounge2.jpg">
-                        <img src="./resources/images/lounge2-thumb.jpg" alt=""/>
+                    <div class="photo" role="button" data-full-url="./resources/images/group.jpeg">
+                        <li><button type="button" aria-label="open photo of people"><img src="./resources/images/group.jpeg" alt="a group of five people wearing halloween costumes"/></button></li>
                     </div>
-                    <div class="photo" role="button" data-full-url="./resources/images/hive.jpg">
-                        <img src="./resources/images/hive-thumb.jpg" alt=""/>
+                    <div class="photo" role="button" data-full-url="./resources/images/sculpture.jpg">
+                        <li><button type="button" aria-label="open photo of sculpture"><img src="./resources/images/sculpture.jpeg" alt="orange flowers made of glass with a view of Space Needle Observation Deck in the background"/></button></li>
                     </div>
-                    <div class="photo" role="button" data-full-url="./resources/images/logo.jpg">
-                        <img src="./resources/images/logo-thumb.jpg" alt=""/>
+                    <div class="photo" role="button" data-full-url="./resources/images/sunset.jpeg">
+                        <li><button type="button" aria-label="open photo of sunset"><img src="./resources/images/sunset.jpeg" alt="A back of the person posing with their arms to the sides and looking at the sunset on the beach"/></button></li>
                     </div>
+                    <ul>
                 </div>
             </div>
             <div class="detail">
@@ -47,12 +49,16 @@
                 </div>
             </div>
         </div>
-        <div class="footer toolbar">
+        <div class="footer toolbar" role="toolbar">
             <ul>
-                <li class="plus-one" role="button"><span>+1</span></li>
+                <li><button type="button" aria-label="like"><img src="./resources/images/like.png" alt=""/></button></li>
+                <li><button type="button" aria-label="comment"><img src="./resources/images/comment.png" alt=""/></button></li>
+                <li><button type="button" aria-label="add"><img src="./resources/images/add.png" alt=""/></button></li>
+                <li><button type="button" aria-label="share"><img src="./resources/images/share.png" alt=""/></button></li>
+                <!-- <li class="plus-one" role="button"><span>+1</span></li>
                 <li class="comment" role="button"><span>comment</span></li>
                 <li class="add" role="button"><span>add</span></li>
-                <li class="share" role="button"><span>share</span></li>
+                <li class="share" role="button"><span>share</span></li> -->
             </ul>
         </div>
     </div>
