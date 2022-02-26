@@ -10,21 +10,27 @@ body {
 	overflow-x: hidden;
 }
 
-/* ul {
+ul {
 	padding: 0;
 	margin: 0;
-	list-style: none;
+	list-style-type: none;
+}
 
-} */
-/* button {
-	border: none;
-	outline:0;
-	background: transparent;
-} */
+button {
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+	margin: 0;
+}
 
-.detail-overlay, .footer { opacity: 0;  transition: opacity 0.15s ease-in-out }
 
+.footer,
+.detail-overlay,
+.detail-overlay-img,
+.detail-view .gallery .grid { display: none; }
 
+.photo button {  transition: opacity 0.15s ease-in-out }
 
 .photo img {
 	width: 100%;
@@ -72,12 +78,13 @@ h1 {
 	max-width: 90.5%;
 }
 
-.footer [role=button] {
+.footer .img-opt-btn{
 	width: 20px;
-	height: 20px;	
+	height: 20px;
+	overflow: hidden;
 }
 
-.footer [role=button] span {
+.footer .img-opt-btn span {
 	position: absolute;
 	clip: rect(0, 1px, 1px, 0);
 }
@@ -89,10 +96,9 @@ h1 {
 	padding: 0;
 	display: flex;
 	justify-content: space-evenly;
-	list-style-type: none;
 }
 
-.footer li {
+.footer .img-opt-btn {
 	background-size: 100%;
 }
 
@@ -110,7 +116,7 @@ h1 {
 .photos {
 	margin: 0 auto;
 	font-size: 0;
-	max-width: 320px;
+	max-width: 325px;
 	display:  flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -123,6 +129,15 @@ h1 {
 	cursor: pointer;
 	margin: 5px;
 	overflow: hidden;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.281);
+}
+
+.grid-view .gallery .photo button { opacity: 0.6; }
+
+.grid-view .gallery .photo button:hover,
+.grid-view .gallery .photo button:focus {
+	opacity: 1;
 }
 
 .detail-view .gallery {
@@ -138,11 +153,13 @@ h1 {
 	justify-content: center;
 }
 
-.detail-overlay img { 
+.detail-overlay .detail-overlay-img { 
 	width: 100vw;
 	align-self: center;
 	justify-self: center; 
 }
+
+.detail-overlay .detail-overlay-img.active { display: block; }
 
 @media screen and (min-device-width: 414px) {
 	.detail-overlay img { width: 50%; }
@@ -151,7 +168,6 @@ h1 {
 .detail-view .gallery .detail-overlay {
 	top: 0;
 	display: flex;
-	opacity: 1;
 }
 
 
@@ -159,7 +175,7 @@ h1 {
 	font-size: 1.25em;
 	font-weight: bold;
 	right: 20px;
-	top: 0.7em;
+	top: 0.9em;
 	position: absolute;
 	cursor: pointer;
 	color: #ebebeb;
@@ -171,6 +187,7 @@ h1 {
 }
 
 .detail-view .footer {
+	display: block;
 	padding: 20px 0;
 	bottom: 0;
 	opacity: 1;

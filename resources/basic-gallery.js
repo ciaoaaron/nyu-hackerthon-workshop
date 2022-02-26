@@ -6,22 +6,21 @@ class BasicGallery {
 
         const thumbnails = basicGallery.querySelectorAll(`.${thumbNailClass}`);
         const title = basicGallery.querySelector('h1');
-
         const overlay = basicGallery.querySelector(`.${overlayClass}`);
         const overlayCloseBtn = overlay?.querySelector(`.${overlayCloseBtnClass}`);
-        const detailImg = overlay?.querySelector(`.${detailImageClass}`);
+        const detailImgs = overlay?.querySelectorAll(`.${detailImageClass}`);
         
-        if (!thumbnails.length || !overlay || !detailImg || !overlayCloseBtn) throw new Error('Cannot find required elements.');
+        if (!thumbnails.length || !overlay || !detailImgs || !overlayCloseBtn) throw new Error('Cannot find required elements.');
 
-        this.thumbnail = Array.from(thumbnails);
+        this.thumbnails = Array.from(thumbnails);
         this.overlay = overlay;
-        this.detailImg = detailImg;
+        this.detailImgs = detailImgs;
         this.overlayCloseBtn = overlayCloseBtn;
         this.galleryTitle = title;
         this.defaultTitle = basicGallery.dataset.title || 'My Photo Gallery';
 
-        this.thumbnail.forEach((thumbnail) => {
-           thumbnail.addEventListener('click', this.showDetail.bind(this));
+        this.thumbnails.forEach((thumbnail) => {
+           thumbnail.addEventListener('click', this.showDetail.bind(this, thumbnail.dataset.idx));
         });
 
         this.overlayCloseBtn.addEventListener('click', this.hideDetail.bind(this));
@@ -34,23 +33,25 @@ class BasicGallery {
         this.galleryTitle.textContent = text;
     }
 
-    showDetail(event) {
+    showDetail(activeImageIdx, event) {
         const { currentTarget } = event;
-        const { fullUrl, title } = currentTarget.dataset;
-        this.renderDetailImage(fullUrl);
-        this.updateTitle(title);
+        this.toggleActiveImage(activeImageIdx);
+        this.updateTitle(currentTarget.dataset.title);
         this.showDetailOverlay();
+        this.galleryTitle.focus();
+    }
+
+    toggleActiveImage(activeImageIdx) {
+        this.detailImgs[activeImageIdx].classList.toggle('active');
+        this.currentActiveIdx = Number.isInteger(this.currentActiveIdx) ? null : activeImageIdx;
     }
 
     hideDetail() {
-        this.detailImg.setAttribute('src', '');
+        const idx = this.currentActiveIdx;
+        this.toggleActiveImage(this.currentActiveIdx);
         this.updateTitle(this.defaultTitle);
         this.hideDetailOverlay();
-    }
-
-    renderDetailImage(url) {
-        if (!url) return;
-        this.detailImg.setAttribute('src', url);
+        this.thumbnails[idx].children[0].focus();
     }
 
     showDetailOverlay() {
