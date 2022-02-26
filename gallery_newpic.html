@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="resources/gallery.css" />
+</head>
+<body>
+
+    <div class="grid-view base-view" data-title="Image Gallery">
+        <div class="header toolbar">
+            <h1></h1>
+            <span class="close-button" role="button"></span>
+        </div>
+        <div class="gallery">
+            <div class="grid">
+                <div class="photos" data-title="Lounge">
+                    <div class="photo" role="button" data-full-url="./resources/images/mosaic.jpeg">
+                        <img src="./resources/images/mosaic.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-full-url="./resources/images/skyline.jpeg">
+                        <img src="./resources/images/skyline.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-full-url="./resources/images/dogs.jpeg">
+                        <img src="./resources/images/dogs.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-full-url="./resources/images/laptop.jpeg">
+                        <img src="./resources/images/laptop.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-full-url="./resources/images/flowers.jpeg">
+                        <img src="./resources/images/flowers.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-full-url="./resources/images/group.jpeg">
+                        <img src="./resources/images/group.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-full-url="./resources/images/sculpture.jpeg">
+                        <img src="./resources/images/sculpture.jpeg" alt=""/>
+                    </div>
+                    <div class="photo" role="button" data-full-url="./resources/images/sunset.jpeg">
+                        <img src="./resources/images/sunset.jpeg" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="detail">
+                <div class="scroll-viewport">
+                    <div class="carousel"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer toolbar">
+            <ul>
+                <li class="plus-one" role="button"><span>+1</span></li>
+                <li class="comment" role="button"><span>comment</span></li>
+                <li class="add" role="button"><span>add</span></li>
+                <li class="share" role="button"><span>share</span></li>
+            </ul>
+        </div>
+    </div>
+    <script src="resources/scroll-snap.js"></script>
+    <script type="text/javascript" src="resources/gallery.js"></script>
+</body>
+</html>
