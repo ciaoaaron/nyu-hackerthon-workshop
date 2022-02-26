@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../resources/gallery.css" />
+</head>
+<body class="grid-view">
+    <!-- Note: <main> -->
+    <main class="base-view basic-gallery">
+        <div class="header toolbar">
+            <!-- Start: Document Heading -->
+            <h1 id="gallery-title" tabindex="-1"></h1>
+            <!-- End: Document Heading -->
+        </div>
+        <div class="gallery">
+            <div class="grid">
+                <!-- Start: Thumbnails -->
+                <ul class="photos">
+                    <li class="photo" data-full-url="../resources/images/mosaic.jpeg" data-idx="0" data-title="Mosaic">
+                        <button type="button" title="Mosaic" aria-label="show mosaic"><img src="../resources/images/mosaic.jpeg" alt=""/></button>
+                    </li>
+                    <li class="photo" data-full-url="../resources/images/skyline.jpeg" data-idx="1" data-title="Skyline">
+                        <button type="button" title="Skyline" aria-label="show skyline"><img src="../resources/images/skyline.jpeg" alt=""/></button>
+                    </li>
+                    <li class="photo" data-full-url="../resources/images/dogs.jpeg" data-idx="2" data-title="Dogs">
+                        <button type="button" title="Dogs" aria-label="show dogs"><img src="../resources/images/dogs.jpeg" alt=""/></button>
+                    </li>
+                    <li class="photo" data-full-url="../resources/images/laptop.jpeg" data-idx="3" data-title="Laptop">
+                        <button type="button" title="Laptop" aria-label="show laptop"><img src="../resources/images/laptop.jpeg" alt=""/></button>
+                    </li>
+                    <li class="photo" data-full-url="../resources/images/flowers.jpeg" data-idx="4" data-title="Flowers">
+                        <button type="button" title="Flowers" aria-label="show flowers"><img src="../resources/images/flowers.jpeg" alt=""/></button>
+                    </li>
+                    <li class="photo" data-full-url="../resources/images/group.jpeg" data-idx="5" data-title="Group">
+                        <button type="button" title="People" aria-label="show people"><img src="../resources/images/group.jpeg" alt=""/></button>
+                    </li>
+                    <li class="photo" data-full-url="../resources/images/sculpture.jpg" data-idx="6" data-title="Scupture">
+                        <button type="button" title="Sculpture" aria-label="show sculpture"><img src="../resources/images/sculpture.jpeg" alt=""/></button>
+                    </li>
+                    <li class="photo" data-full-url="../resources/images/sunset.jpeg" data-idx="7" data-title="Sunset">
+                        <button type="button" title="Sunset" aria-label="show sunset"><img src="../resources/images/sunset.jpeg" alt=""/></button>
+                    </li>
+                <ul>
+                <!-- End: Thumbnails -->
+            </div>
+            <!-- Start: Detail Overlay -->
+            <div class="detail-overlay" role="dialog" aria-labelledby="gallery-title">
+                <button class="close-button" title="Close" aria-label="Close"></button>
+                <img class="detail-overlay-img" src="../resources/images/mosaic.jpeg" alt="A colorful mosaic depicting a street view with a person riding skateboard in the center"/>
+                <img class="detail-overlay-img" src="../resources/images/skyline.jpeg" alt="New York night skyline with Empire State building in the center"/>
+                <img class="detail-overlay-img" src="../resources/images/dogs.jpeg" alt="Three small dogs eating a pink cake"/>
+                <img class="detail-overlay-img" src="../resources/images/laptop.jpeg" alt="Laptop screen with YouTube music video, a song by Alan Walkers & Sia"/>
+                <img class="detail-overlay-img" src="../resources/images/flowers.jpeg" alt="white flowers on an apple tree"/>
+                <img class="detail-overlay-img" src="../resources/images/group.jpeg" alt="a group of five people wearing halloween costumes"/>
+                <img class="detail-overlay-img" src="../resources/images/sculpture.jpeg" alt="orange flowers made of glass with a view of Space Needle Observation Deck in the background"/>
+                <img class="detail-overlay-img" src="../resources/images/sunset.jpeg" alt="A back of the person posing with their arms to the sides and looking at the sunset on the beach"/>
+            </div>
+            <!-- End: Detail Overlay -->
+        </div>
+        <!-- Start: Toolbar Buttons -->
+        <div role="toolbar" class="footer toolbar" aria-label="image options">
+            <ul>
+                <li>
+                    <button class="img-opt-btn plus-one" title="Like"><span>like</span></button>
+                </li>
+                <li>
+                    <button class="img-opt-btn comment" title="Comment"><span>comment</span></button>
+                </li>
+                <li>
+                    <button class="img-opt-btn add" title="Add to Cloud Service"><span>add to cloud service</span></button>
+                </li>
+                <li>
+                    <button class="img-opt-btn share" title="Share"><span>share</span></button>
+                </li>
+            </ul>
+        </div>
+        <!-- End: Toolbar Buttons -->
+    </main>
+    <script type="text/javascript" src="../resources/basic-gallery.js"></script>
+</body>
+</html>
