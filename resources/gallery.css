@@ -161,8 +161,8 @@ h1 {
 
 .detail-overlay .detail-overlay-img.active { display: block; }
 
-@media screen and (min-device-width: 414px) {
-	.detail-overlay img { width: 50%; }
+@media screen and (min-width: 414px) {
+	.detail-overlay .detail-overlay-img { width: 50%; }
 }
 
 .detail-view .gallery .detail-overlay {
